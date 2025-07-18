@@ -21,7 +21,20 @@ Lb.insert(1, 'Python')
 Lb.insert(2, 'Java')
 Lb.insert(3, 'C++')
 Lb.insert(4, 'C#') 
-Lb.grid(columnspan=2)   
+Lb.grid(columnspan=2)
+#Function to get user input from Entry field
+#and print it to the console
+def GetPlayerInput():
+    UserInput = EntryField1.get()
+    print(UserInput)
+    
+    
+#Create an Entry field for user input
+#and a button to submit the input    
+EntryField1 = Entry(root)
+EntryField1.grid(row=3, column=3, columnspan=2)
+Button(root, text='Submit', command=GetPlayerInput).grid(row=4, column=3, columnspan=2)
+
 
 #listbox.grid must be called after the insert method
 #to ensure the listbox is populated before displaying it

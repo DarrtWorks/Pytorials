@@ -13,4 +13,5 @@ var1 = IntVar()
 Checkbutton(root, text='male', variable=var1).grid(row=2,column=0, sticky=W, columnspan=2)
 var2 = IntVar()
 Checkbutton(root, text='female', variable=var2).grid(row=2,column=1, sticky=W, columnspan=2)
+#Can use Radiobutton instead of Checkbutton for single selection
 root.mainloop()

@@ -21,7 +21,7 @@ Lb.insert(1, 'Python')
 Lb.insert(2, 'Java')
 Lb.insert(3, 'C++')
 Lb.insert(4, 'C#') 
-Lb.grid(row=3,column=0, columnspan=2)   
+Lb.grid(columnspan=2)   
 
 #listbox.grid must be called after the insert method
 #to ensure the listbox is populated before displaying it

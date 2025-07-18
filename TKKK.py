@@ -11,7 +11,21 @@ e1 = Entry(root).grid(row=0,column=1)
 e2 = Entry(root).grid(row=1,column=1)
 var1 = IntVar()
 Checkbutton(root, text='male', variable=var1).grid(row=2,column=0, sticky=W, columnspan=2)
+#we can call grid on checkbutton directly
+#instead of assigning it to a variable
+#as we are not using it later to modify the checkbutton
 var2 = IntVar()
-Checkbutton(root, text='female', variable=var2).grid(row=2,column=1, sticky=W, columnspan=2)
+Checkbutton(root, text='female', variable=var2).grid(row=2,column=1, columnspan=2)
+Lb = Listbox(root)
+Lb.insert(1, 'Python')
+Lb.insert(2, 'Java')
+Lb.insert(3, 'C++')
+Lb.insert(4, 'C#') 
+Lb.grid(row=3,column=0, columnspan=2)   
+
+#listbox.grid must be called after the insert method
+#to ensure the listbox is populated before displaying it
+
+
 #Can use Radiobutton instead of Checkbutton for single selection
 root.mainloop()
